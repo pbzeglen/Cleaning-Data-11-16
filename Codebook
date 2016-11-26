@@ -1,7 +1,74 @@
 # Code Book
 
 ## Subject and Action
+There are thirty subjects, with an integer from 1 to 30 assigned to them as an identifier. 
+There are six actions: "WALKING","WALKING_UPSTAIRS","WALKING_DOWNSTAIRS","SITTING","STANDING","LAYING". 
+The action column of the tidy dataset is labeled with these actions. The subject column displays each subjects number id.
 
 ## Time vs. Fast fourier transform
 
+The entire dataset is based on these measurements: 
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+"Acc" indicates acceleration (m/s^2), "mag" indicates the "magnitude" of the movement (m/s), 
+Gyro indicates the raw "gyroscopic rotation data" from the phone, and Jerk represents the change in calculated changes in acceleration (m/s^3).
+The prefaces "t" and "f" represented the type of transform on the data: "t" for "time domain" and "f" for "fast fourier transform". 
+In the updated codebook, the variables have been changed to their longer name for readability.
+
 ## Mean vs. Standard Deviation
+
+The standard deviation of each variable was calculated in each axis direction and a standard deviation measurement is 
+indicated by "std()" at the end of the column label. The mean on each axis was also calculated and is represented by "mean()".
+
+## Final dataset column names
+
+ [1] subject                                           action                                           
+ [3] time-BodyAcc-mean()-X                             time-BodyAcc-mean()-Y                            
+ [5] time-BodyAcc-mean()-Z                             time-BodyAcc-std()-X                             
+ [7] time-BodyAcc-std()-Y                              time-BodyAcc-std()-Z                             
+ [9] time-GravityAcc-mean()-X                          time-GravityAcc-mean()-Y                         
+[11] time-GravityAcc-mean()-Z                          time-GravityAcc-std()-X                          
+[13] time-GravityAcc-std()-Y                           time-GravityAcc-std()-Z                          
+[15] time-BodyAccJerk-mean()-X                         time-BodyAccJerk-mean()-Y                        
+[17] time-BodyAccJerk-mean()-Z                         time-BodyAccJerk-std()-X                         
+[19] time-BodyAccJerk-std()-Y                          time-BodyAccJerk-std()-Z                         
+[21] time-BodyGyro-mean()-X                            time-BodyGyro-mean()-Y                           
+[23] time-BodyGyro-mean()-Z                            time-BodyGyro-std()-X                            
+[25] time-BodyGyro-std()-Y                             time-BodyGyro-std()-Z                            
+[27] time-BodyGyroJerk-mean()-X                        time-BodyGyroJerk-mean()-Y                       
+[29] time-BodyGyroJerk-mean()-Z                        time-BodyGyroJerk-std()-X                        
+[31] time-BodyGyroJerk-std()-Y                         time-BodyGyroJerk-std()-Z                        
+[33] time-BodyAccMag-mean()                            time-BodyAccMag-std()                            
+[35] time-GravityAccMag-mean()                         time-GravityAccMag-std()                         
+[37] time-BodyAccJerkMag-mean()                        time-BodyAccJerkMag-std()                        
+[39] time-BodyGyroMag-mean()                           time-BodyGyroMag-std()                           
+[41] time-BodyGyroJerkMag-mean()                       time-BodyGyroJerkMag-std()                       
+[43] fast fourier transform-BodyAcc-mean()-X           fast fourier transform-BodyAcc-mean()-Y          
+[45] fast fourier transform-BodyAcc-mean()-Z           fast fourier transform-BodyAcc-std()-X           
+[47] fast fourier transform-BodyAcc-std()-Y            fast fourier transform-BodyAcc-std()-Z           
+[49] fast fourier transform-BodyAccJerk-mean()-X       fast fourier transform-BodyAccJerk-mean()-Y      
+[51] fast fourier transform-BodyAccJerk-mean()-Z       fast fourier transform-BodyAccJerk-std()-X       
+[53] fast fourier transform-BodyAccJerk-std()-Y        fast fourier transform-BodyAccJerk-std()-Z       
+[55] fast fourier transform-BodyGyro-mean()-X          fast fourier transform-BodyGyro-mean()-Y         
+[57] fast fourier transform-BodyGyro-mean()-Z          fast fourier transform-BodyGyro-std()-X          
+[59] fast fourier transform-BodyGyro-std()-Y           fast fourier transform-BodyGyro-std()-Z          
+[61] fast fourier transform-BodyAccMag-mean()          fast fourier transform-BodyAccMag-std()          
+[63] fast fourier transform-BodyBodyAccJerkMag-mean()  fast fourier transform-BodyBodyAccJerkMag-std()  
+[65] fast fourier transform-BodyBodyGyroMag-mean()     fast fourier transform-BodyBodyGyroMag-std()     
+[67] fast fourier transform-BodyBodyGyroJerkMag-mean() fast fourier transform-BodyBodyGyroJerkMag-std() 
