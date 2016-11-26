@@ -45,3 +45,5 @@ names(combined) <- gsub("^f","fast fourier transform-",names(combined))
 
 #Take the mean of all measurements by subject and action
 averageTable <- aggregate(. ~ subject + action, combined,mean)
+
+write.table(averageTable,file = "tidyMotionDataSet.txt",row.names = FALSE)
